@@ -1,5 +1,5 @@
 node {
-   def mvnHome
+   def mvnHome = tool 'M3'
    stage('Prepare') {
       git url: 'git@github.com:ashwinpatil05/devops.git'
       mvnHome = tool 'maven'
