@@ -1,10 +1,10 @@
 #!groovy​
 
 node {
-   def mvnHome =
+   def mvnHome = tool 'maven'
+
    stage('Prepare') {
       git url: 'git@github.com:ashwinpatil05/devops.git', branch: 'develop'
-      mvnHome = tool 'maven'
    }
    stage('Build') {
       if (isUnix()) {
